@@ -54,12 +54,7 @@ export class App extends Component {
   render(){    
     return (
       <div className="App">
-        <h1>React App</h1>
-
-        <div>
-          <button className="App__button" onClick={this.switchNameHandler}>Switch Names!</button>
-        </div>
-        
+        <h1>Person App</h1>
         <button className="App__button" onClick={this.togglePersonListHandler}>
           { this.state.isActive ? 'Hide names!' : 'Show names!' }
         </button>
@@ -67,6 +62,7 @@ export class App extends Component {
         {
           this.state.isActive ? (
             <div>
+              <button className="App__button" onClick={this.switchNameHandler}>Switch Names!</button>
               {
                 this.state.persons.map( ( person ) => {
                   return (
@@ -75,7 +71,6 @@ export class App extends Component {
                       id={ person.id }
                       name={person.name} 
                       age={person.age}
-                      click={this.switchNameHandler}
                       onChange={this.handleNameChange}/>
                     );
                 } )
