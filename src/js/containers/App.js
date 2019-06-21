@@ -38,8 +38,8 @@ export class App extends Component {
   }
 
   handleNameChange ( event, id ) {
-    var personIndex = findIndex( this.state.persons, { id: id } );
-    var persons = cloneDeep( this.state.persons );
+    var personIndex = findIndex( this.state.persons, { id: id } );  //find index and in 2nd argument we can pass the object
+    var persons = cloneDeep( this.state.persons );                  // it will copy array by value not by reference
     persons[ personIndex ].name = event.target.value;
 
     this.setState( { persons } );
