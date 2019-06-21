@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { findIndex, cloneDeep } from 'lodash';
+import { Fragment } from 'react';
+
 
 // import './App.scss';
 import { person as Person } from 'views/Person';
@@ -61,7 +63,7 @@ export class App extends Component {
         
         {
           this.state.isActive ? (
-            <div>
+            <Fragment>
               <button className="App__button" onClick={this.switchNameHandler}>Switch Names!</button>
               {
                 this.state.persons.map( ( person ) => {
@@ -75,7 +77,7 @@ export class App extends Component {
                     );
                 } )
               }
-            </div>
+            </Fragment>
           ) : null
         }
         <p className="App__devname">Developed By-Rajat</p>
