@@ -35,6 +35,13 @@ module.exports = {
         ]
     },
 
+    resolve: {
+        alias: {
+            containers: path.resolve( __dirname, 'src/js/containers' ),
+            views: path.resolve( __dirname, 'src/js/views' )
+        }
+    },
+
     plugins: [
         new MiniCssExtractPlugin( {
             filename: 'styles.css'
