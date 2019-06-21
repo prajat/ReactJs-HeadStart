@@ -63,8 +63,8 @@ export class App extends Component {
         
         {
           this.state.isActive ? (
-            <Fragment>
-              <button className="App__button" onClick={this.switchNameHandler}>Switch Names!</button>
+            <div className="person">
+              <button className="person__button" onClick={this.switchNameHandler}>Switch Names!</button>
               {
                 this.state.persons.map( ( person ) => {
                   return (
@@ -77,7 +77,7 @@ export class App extends Component {
                     );
                 } )
               }
-            </Fragment>
+            </div>
           ) : null
         }
         <p className="App__devname">Developed By-Rajat</p>
