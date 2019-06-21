@@ -78,6 +78,7 @@ export class App extends Component {
             </div>
           ) : null
         }
+        <p className="App__devname">Developed By-Rajat</p>
       </div>
       
 
