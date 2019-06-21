@@ -42,7 +42,7 @@ export class App extends Component {
     var persons = cloneDeep( this.state.persons );                  // it will copy array by value not by reference
     persons[ personIndex ].name = event.target.value;
 
-    this.setState( { persons } );
+    this.setState( { persons : persons} );
   }
   
   togglePersonListHandler() {
