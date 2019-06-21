@@ -9,7 +9,7 @@ const _ = require( 'lodash' );
 module.exports = {
 
     // webpack optimization mode
-    mode: 'production',
+    mode: 'development',
 
     // entry file(s)
     entry: path.resolve( __dirname, 'src/index.js' ),
