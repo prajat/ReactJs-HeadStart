@@ -68,7 +68,7 @@ export class App extends Component {
               {
                 this.state.persons.map( ( person ) => {
                   return (
-                    <Person 
+                      <Person 
                       key={ person.id }
                       id={ person.id }
                       name={person.name} 
