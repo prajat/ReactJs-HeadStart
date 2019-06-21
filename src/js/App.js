@@ -9,7 +9,9 @@ class App extends Component{
       {name:'shankar',age:'21'},
       {name:'jaden',age:'20'}
     ],
-    showPersons:false
+    showPersons:false,
+    buttonname:'Show names!'
+
   }
 
   switchnameHandler = ()=>{
@@ -38,7 +40,13 @@ class App extends Component{
   
   togglePersonHandler=()=>{
     const showstatus=this.state.showPersons;
+    if(this.state.buttonname=='Show names!'){
+      this.setState({buttonname:'Hide names!'});
+    }else{
+      this.setState({buttonname:'Show names!'});
+    }
     this.setState({showPersons:!showstatus});
+
   }
   
   render(){
@@ -70,7 +78,7 @@ class App extends Component{
         <h1>React App</h1>
         <button className="App__button" onClick={this.switchnameHandler}>Switch Names!</button>
         <br />
-        <button className="App__button" onClick={this.togglePersonHandler}>Show Names!</button>
+        <button className="App__button" onClick={this.togglePersonHandler}>{this.state.buttonname}</button>
         {persons}
 
       </div>
