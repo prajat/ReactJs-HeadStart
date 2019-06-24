@@ -36,7 +36,7 @@ export class App extends Component {
       persons:[
         { id: '1', name:'Rajat', age:'21' },
         { id: '2', name:'Lokesh', age:'19' },
-        { id: '3', name:'Sarvjeet', age:'22' }
+        { id: '3', name:'Sarvjit', age:'22' }
       ]
     } );
   }
