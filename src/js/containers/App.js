@@ -27,6 +27,7 @@ export class App extends Component {
     this.handleNameChange = this.handleNameChange.bind( this );
     this.switchNameHandler = this.switchNameHandler.bind( this );
     this.togglePersonListHandler = this.togglePersonListHandler.bind( this );
+    this.deletePersonHandler=this.deletePersonHandler.bind(this);
   }
 
   switchNameHandler() {
@@ -52,6 +53,13 @@ export class App extends Component {
       isActive: ! this.state.isActive
     } );
   }
+
+  deletePersonHandler(id){
+    const personIndex=findIndex(this.state.persons,{id:id});
+    const persons=cloneDeep(this.state.persons);
+    persons.splice(personIndex,1);
+    this.setState({persons:persons});
+  }
   
   render(){    
     return (
@@ -73,7 +81,8 @@ export class App extends Component {
                       id={ person.id }
                       name={person.name} 
                       age={person.age}
-                      onChange={this.handleNameChange}/>
+                      onChange={this.handleNameChange}
+                      click={this.deletePersonHandler} />
                     );
                 } )
               }
