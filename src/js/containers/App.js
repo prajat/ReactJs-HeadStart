@@ -66,11 +66,12 @@ export class App extends Component {
     // const classes=[];
     // if(this.state.isActive==false){   way to add css classes dyanamically
     //   classes.push('person-out');
-    // }
+    // } `App__button--active-${ this.state.isActive }` -> 'App__button--active-false'
+
     return (
       <div className="App">
         <h1>Person App</h1>
-        <button className="App__button" onClick={this.togglePersonListHandler}>
+        <button className={`App__button App__button--active-${ this.state.isActive }`} onClick={this.togglePersonListHandler}>
           { this.state.isActive ? 'Hide names!' : 'Show names!' }
         </button>
 
@@ -92,6 +93,7 @@ export class App extends Component {
                 } )
               }
             </div>
+
           ) : null
         }
         <p className="App__devname">Developed By-Rajat</p>
