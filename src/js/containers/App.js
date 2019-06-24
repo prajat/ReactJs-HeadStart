@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { findIndex, cloneDeep } from 'lodash';
 import { Fragment } from 'react';
+import classNames from 'classNames';
 
 
 // import './App.scss';
@@ -68,10 +69,18 @@ export class App extends Component {
     //   classes.push('person-out');
     // } `App__button--active-${ this.state.isActive }` -> 'App__button--active-false'
 
+    //{`App__button App__button--active-${ this.state.isActive }`}  way to add 2 classes usin literal
+
+    //using classnames plugin to add two classes conditionally.
+    const App_btncls=classNames('App__button',{
+      'App__button--active-true':this.state.isActive
+    });
+
+
     return (
       <div className="App">
         <h1>Person App</h1>
-        <button className={`App__button App__button--active-${ this.state.isActive }`} onClick={this.togglePersonListHandler}>
+        <button className={App_btncls} onClick={this.togglePersonListHandler}>
           { this.state.isActive ? 'Hide names!' : 'Show names!' }
         </button>
 
