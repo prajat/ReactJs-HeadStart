@@ -61,14 +61,19 @@ export class App extends Component {
     this.setState({persons:persons});
   }
   
-  render(){    
+  render(){  
+    
+    // const classes=[];
+    // if(this.state.isActive==false){   way to add css classes dyanamically
+    //   classes.push('person-out');
+    // }
     return (
       <div className="App">
         <h1>Person App</h1>
         <button className="App__button" onClick={this.togglePersonListHandler}>
           { this.state.isActive ? 'Hide names!' : 'Show names!' }
         </button>
-        
+
         {
           this.state.isActive ? (
             <div className="person">
