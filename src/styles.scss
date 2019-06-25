@@ -4,7 +4,7 @@ body {
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
 
-    background-color: #1e272e;
+        background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
 #root {
@@ -20,32 +20,34 @@ body {
     color: #ffffff;
     width: 50%;
     text-align: center;
-    border: 4px solid #f1c40f;
+    border: 4px solid #C37BBE;
     box-shadow: 0.5rem 0.5rem 1rem #888888;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #636e72;
+    background-color: rgba(0,0,0,0.5);
     padding: 10px;
 
     h1 {
         font-size: 3rem;
-        color: #f39c12;
+        color: #ffffff;
         //font-family: "Arvo";
         text-shadow: 2px 0 #f1c40f;
     }
 
     &__button {
-        border: 2px solid orange;
+        border: 2px solid #C37BBE;
         font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
         padding: 10px;
         margin: 10px;
         cursor: pointer;
         transition: background-color 0.3s ease-out;
 
         &:hover {
-            background-color: #2ecc71;
+            background-color: #C37BBE;
         }
 
         &--active-true {
@@ -54,7 +56,7 @@ body {
     }
 
     &__devname {
-        color: #1e272e;
+        color:white;
 
     }
 }
@@ -69,36 +71,43 @@ body {
 
 
     &__button {
-        border: 4px solid #f1c40f;
+        border: 2px solid #C37BBE;
         font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
         padding: 10px;
         margin: 10px;
         cursor: pointer;
 
         &:hover {
-            background-color: #2ecc71;
+            background-color: #C37BBE;
         }
 
 
     }
 
     &__card {
-        border: 4px solid #f1c40f;
+        border: 4px solid #74b9ff;
         margin-top: 20px;
         margin-bottom: 10px;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.4);
         box-shadow: 0.5rem 0.5rem 1rem #1e272e;
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.05,1.05);
+        }
 
         &__input {
             opacity: 0.8;
             margin: 10px;
             width: 60%;
             height: 25px;
+            background-color: #86A9ED;
 
             &:hover {
                 opacity: 1;
@@ -107,7 +116,7 @@ body {
 
         &__delbtn {
             // border: 2px solid balck;
-            background-color: #e67e22;
+            background-color: #D16CA7;
             color: white;
             font-family: inherit;
             padding: 10px;
@@ -115,7 +124,8 @@ body {
             cursor: pointer;
 
             &:hover {
-                background-color: #f1c40f;
+                background-color: orangered;
+                
             }
 
 
